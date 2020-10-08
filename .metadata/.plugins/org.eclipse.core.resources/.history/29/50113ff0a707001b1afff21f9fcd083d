@@ -1,0 +1,10 @@
+package Teacher;
+
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+
+public class EventActionListener implements ActionListener{
+	JButton btn[];
+	JTextField txtVal;
+}

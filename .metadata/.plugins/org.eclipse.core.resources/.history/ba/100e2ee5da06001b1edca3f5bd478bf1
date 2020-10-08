@@ -1,0 +1,24 @@
+
+public class PrintThread1 {
+	SharedArea1 sharedArea1;
+
+	PrintThread1(SharedArea1 area1) {
+		sharedArea1 = area1;
+	}
+
+	public void run() {
+		for (int cnt = 0; cnt < 3; cnt++) {
+			synchronized (sharedArea1) {
+				int sum = sharedArea1.account1.balance + sharedArea1.account2.balance;
+				System.out.println("°èÁÂ ÀÜ¾× ÇÕ°è: " + sum);
+			}
+
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				// TODO: handle exception
+				System.out.println(e.getMessage());
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+import java.awt.Dimension;
+
+import javax.swing.JFrame;
+
+public class WindowExample2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame frame = new JFrame("Hello Program");
+		frame.setLocation(500, 400);
+		frame.preferredSize(new Dimension(200,70));
+	}
+
+}

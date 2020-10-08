@@ -1,0 +1,8 @@
+
+class TransferThread extends Thread {
+	SharedArea1 sharedArea1;
+	TransferThread(SharedArea1 area) {
+		// TODO Auto-generated constructor stub
+		sharedArea1=area;
+	}
+}

@@ -1,0 +1,15 @@
+
+public class NestedClassExample7 {
+	public static void main(String args[]) {
+		class ContactInfo{
+			String address;
+			String phoneNo;
+			ContactInfo(String address, String phoneNo) {
+				// TODO Auto-generated constructor stub
+				this.address = address;
+				this.phoneNo = phoneNo;
+			}
+		}
+	}
+
+}

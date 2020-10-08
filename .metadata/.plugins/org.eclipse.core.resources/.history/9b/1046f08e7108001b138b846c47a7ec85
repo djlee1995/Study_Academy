@@ -1,0 +1,39 @@
+package Teacher;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
+public class EventActionListener implements ActionListener {
+	JTable table;
+	JTextField txtHakbun, txtIrum, txtKor, txtEng, txtMath,
+	txtTot,txtAvg,txtGrade;
+	 EventActionListener() {
+		
+	}
+	 EventActionListener(JTable table) {
+		 this.table=table;
+			
+		}
+	 EventActionListener(JTable table,JTextField txtHakbun,JTextField txtIrum,JTextField txtKor
+			 ,JTextField txtEng,JTextField txtMath,JTextField txtAvg,JTextField txtGrade) {
+			this.table=table;
+			this.txtHakbun=txtHakbun;
+			this.txtIrum=txtIrum;
+			this.txtKor=txtKor;
+			this.txtEng=txtEng;
+			this.txtMath=txtMath;
+			this.txtTot=txtTot;
+			this.txtAvg=txtAvg;
+			this.txtGrade=txtGrade;
+			
+		}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,67 @@
+package Teacher;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
+public class EventActionListener implements ActionListener {
+	JTable table;
+	JTextField txtHakbun, txtIrum, txtKor, txtEng, txtMath, txtTot, txtAvg, txtGrade;
+
+	EventActionListener() {
+
+	}
+
+	EventActionListener(JTable table) {
+		this.table = table;
+
+	}
+
+	EventActionListener(JTable table, JTextField txtHakbun, JTextField txtIrum, JTextField txtKor, JTextField txtEng,
+			JTextField txtMath) {
+		this.table = table;
+		this.txtHakbun = txtHakbun;
+		this.txtIrum = txtIrum;
+		this.txtKor = txtKor;
+		this.txtEng = txtEng;
+		this.txtMath = txtMath;
+		this.txtTot = txtTot;
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getActionCommand().equals("추가")) {
+
+			insert();
+		} else if (e.getActionCommand().equals("삭제")) {
+			delite();
+
+		}
+	
+	else{
+			update;
+		}
+}
+
+	void insert() {
+		Sungjuk obj = new Sungjuk();
+		int i, rowNum, flag=0;
+		DefaultTableModel model = (DefaultTableModel) table.getModel();
+		obj.hakbun = txtHakbun.getText().trim();
+		
+		rowNum= model.getRowCount();
+		for(i=0; i<rowNum;i++) {
+			String table_hakbun = model.getValueAt(i,0).toString().trim();
+			if(table_hakbun.equals(obj.hakbun)) {
+				flag=1;
+				break;
+			}
+		}
+		if
+	}
+}

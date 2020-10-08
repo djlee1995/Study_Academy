@@ -1,0 +1,15 @@
+package Teacher;
+
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+
+public class EventActionListener implements ActionListener{
+	JButton btn[];
+	JTextField txtVal;
+	public EventActionListener(JButton btn[],JTextField txtVal) {
+		this.btn=btn;
+		this.txtVal=txtVal;
+		// TODO Auto-generated constructor stub
+	}
+}

@@ -1,0 +1,5 @@
+
+class SharedArea1 {
+	Account account1;
+	Account account2;
+}

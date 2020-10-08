@@ -1,0 +1,11 @@
+
+class Rectangle implements PlaneObject {
+	Location location;
+	int width, height;
+	Rectangle(int x, int y, int width, int height){
+		this.location = new Location(x,y);
+		this.width = width;
+		this.height = height;
+		
+	}
+}

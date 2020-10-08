@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class SangpumInner {
+
+	
+	
+	
+	
+	
+	
+	
+	class Sangpum{
+	String code,name,estimate;
+	int count,price,sum;
+	
+	Sangpum(){
+		
+	}
+	void input_Sangpum() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("코드를 입력=> ");
+		code=scan.next();
+		System.out.println("상품명을 입력=> ");
+		name=scan.next();
+		System.out.println("수량을 입력=> ");
+		count=scan.nextInt();
+		System.out.println("단가 입력=> ");
+		price=scan.nextInt();
+		
+	}
+	
+}
+}

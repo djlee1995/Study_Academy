@@ -1,0 +1,22 @@
+package Teacher;
+
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+public class GUI_CalcuEx01 {
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("사칙계산기");
+		frame.setPreferredSize(new Dimension(270,300));
+		frame.setLocation(500,400);
+		Container contentPane = frame.getContentPane();
+		JTextField txtVal = new JTextField();
+		txtVal.setPreferredSize(new Dimension(270,35));
+		Panel panel1 = new Panel();
+		
+	}
+
+}

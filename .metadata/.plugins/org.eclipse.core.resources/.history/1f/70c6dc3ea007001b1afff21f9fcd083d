@@ -1,0 +1,27 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Calculator implements ActionListener {
+	JTextField text;
+	JLabel label;
+	
+	public Calculator(JTextField text, JLabel label) {
+		// TODO Auto-generated constructor stub
+		this.text = text;
+		this.label = label;
+
+	 
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if (e.getActionCommand().equals("0")) {
+			text.setText(text.getText()+"0");
+		}
+		
+	}
+}

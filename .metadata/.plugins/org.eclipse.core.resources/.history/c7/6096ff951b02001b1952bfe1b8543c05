@@ -1,0 +1,63 @@
+import java.util.*;
+
+import SangpumInner.Sangpum;
+
+public class SangpumInnerEx1 {
+	public static void main(String args[]) {
+		SangpumInner sangpum = new SangpumInner();
+		Scanner scan = new Scanner(System.in);
+
+		int menu;
+		while (true) {
+			printMenu();
+			System.out.print("메뉴 선택 => ");
+			menu = scan.nextInt();
+			System.out.println();
+
+			if (menu == 6) {
+				System.out.println("The End...");
+				break;
+			}
+
+			switch (menu) {
+			case 1:
+
+				break;
+			case 2:
+
+				break;
+			case 3:
+
+				break;
+			case 4:
+
+				break;
+			case 5:
+
+				break;
+			default:
+				System.out.println("메뉴를 다시 선택하세요!!!\n");
+			}
+
+		}
+
+	}
+
+	static void printMenu() {
+		System.out.println("*** 상품관리 ***");
+		System.out.println("1. 상품정보 입력");
+		System.out.println("2. 상품정보 출력");
+		System.out.println("3. 상품정보 조회");
+		System.out.println("4. 상품정보 수정");
+		System.out.println("5. 상품정보 삭제");
+		System.out.println("6. 프로그램 종료");
+		System.out.println();
+	}
+	
+	void inputSangpum(SangpumInner sangpum) {
+		SangpumInner.Sangpum obj = sangpum.new Sangpum();
+		obj.input_Sangpum();
+		if()
+		
+	}
+}

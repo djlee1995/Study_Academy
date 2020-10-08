@@ -1,0 +1,9 @@
+
+public class EmailSender extends MessageSender {
+String sender;
+String receiver;
+EmailSender(String sender, String receiver){
+	this.sender = sender;
+	this.receiver = receiver;
+}
+}

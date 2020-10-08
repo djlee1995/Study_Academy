@@ -1,0 +1,79 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+public class SungjukListener implements ActionListener {
+	JTable table;
+	JTextField text1, text2, text3, text4, text5;
+
+	SungjukListener(JTable table, JTextField text1, JTextField text2, JTextField text3, JTextField text4,
+			JTextField text5) {
+		this.table = table;
+		this.text1 = text1;
+		this.text2 = text2;
+		this.text3 = text3;
+		this.text4 = text4;
+		this.text5 = text5;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getActionCommand().equals("추가")) {
+			String arr[] = new String[8];
+			arr[0] = text1.getText();//학번
+			arr[1] = text2.getText();//이름
+			arr[2] = text3.getText();//국어
+			arr[3] = text4.getText();//수학
+			arr[4] = text5.getText();//영어
+			arr[5] = String.valueOf(Integer.parseInt(arr[2])+Integer.parseInt(arr[3])+Integer.parseInt(arr[4]));
+			arr[6] = String.valueOf(Integer.parseInt(arr[2])+Integer.parseInt(arr[3])+Integer.parseInt(arr[4])/3);
+			arr[7] = process();
+
+			DefaultTableModel model = (DefaultTableModel) table.getModel();
+			model.addRow(arr);
+		} 
+		else if(e.getActionCommand().equals("수정")) {
+			
+		}
+		else  {
+			int row = table.getSelectedRow();
+
+			if (row == -1)
+				return;
+			DefaultTableModel model = (DefaultTableModel) table.getModel();
+			model.removeRow(row);
+		}
+	}
+
+	void process() { // 학번 등급
+		 int tot,kor,eng,math;
+		 double avg;
+		 String grade;
+	      tot = 0;
+	      avg = 0.0;
+	      tot = kor + eng + math;
+	      avg = tot / 3.;
+	      switch ((int) (avg / 10)) {
+	      case 10:
+	      case 9:
+	         grade = "수";
+	         break;
+	      case 8:
+	         grade = "우";
+	         break;
+	      case 7:
+	         grade = "미";
+	         break;
+	      case 6:
+	         grade = "양";
+	         break;
+	      default:
+	         grade = "가";
+	      }
+	   }
+	
+
+}

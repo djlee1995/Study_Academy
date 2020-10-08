@@ -1,0 +1,6 @@
+
+class MP3PlayerFactory extends PlayerFactory {
+	public Player createPlayer() {
+	return new MP3Player();
+	}
+}

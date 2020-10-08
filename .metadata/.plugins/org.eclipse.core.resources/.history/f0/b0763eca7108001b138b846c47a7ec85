@@ -1,0 +1,70 @@
+package Teacher;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
+public class EventActionListener implements ActionListener {
+	JTable table;
+	JTextField txtHakbun, txtIrum, txtKor, txtEng, txtMath, txtTot, txtAvg, txtGrade;
+
+	EventActionListener() {
+
+	}
+
+	EventActionListener(JTable table) {
+		this.table = table;
+
+	}
+
+	EventActionListener(JTable table, JTextField txtHakbun, JTextField txtIrum, JTextField txtKor, JTextField txtEng,
+			JTextField txtMath) {
+		this.table = table;
+		this.txtHakbun = txtHakbun;
+		this.txtIrum = txtIrum;
+		this.txtKor = txtKor;
+		this.txtEng = txtEng;
+		this.txtMath = txtMath;
+		this.txtTot = txtTot;
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getActionCommand().equals("추가")) {
+
+			arr[0] = text1.getText();// 학번
+			arr[1] = text2.getText();// 이름
+			arr[2] = text3.getText();// 국어
+			arr[3] = text4.getText();// 수학
+			arr[4] = text5.getText();// 영어
+			arr[5] = sum();
+			arr[6] = avg();
+			arr[7] = process();
+			DefaultTableModel model = (DefaultTableModel) table.getModel();
+			model.addRow(arr);
+		} else if (e.getActionCommand().equals("수정")) {
+			TableModel model = table.getModel();
+			int colNum = model.getColumnCount();
+			for (int col = 0; col < colNum; col++) {
+				if (text1.getText().equals(arr[0]))
+					text3.setText(text3.getText());
+				text4.setText(text4.getText());
+				text5.setText(text5.getText());
+
+			}
+		} else {
+			int row = table.getSelectedRow();
+
+			if (row == -1)
+				return;
+			DefaultTableModel model = (DefaultTableModel) table.getModel();
+			model.removeRow(row);
+		}
+	}
+
+}

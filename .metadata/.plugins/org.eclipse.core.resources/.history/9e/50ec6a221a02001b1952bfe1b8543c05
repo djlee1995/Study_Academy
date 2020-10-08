@@ -1,0 +1,40 @@
+
+public class SangpumInnerEx1 {
+	public static void main(String args[]) {
+		SangpumInner sangpum = new SangpumInner();
+		while (true) {
+			printMenu();
+			System.out.print("메뉴 선택 => ");
+			menu = scan.nextInt();
+			System.out.println();
+
+			if (menu == 6) {
+				System.out.println("The End...");
+				break;
+			}
+
+			switch (menu) {
+			case 1:
+				inputSungjuk(sungjuk);
+				break;
+			case 2:
+				printSungjuk(sungjuk);
+				break;
+			case 3:
+				searchSungjuk(sungjuk);
+				break;
+			case 4:
+				changeSungjuk(sungjuk);
+				break;
+			case 5:
+				removeSungjuk(sungjuk);
+				break;
+			default:
+				System.out.println("메뉴를 다시 선택하세요!!!\n");
+			}
+
+		}
+
+	}
+	}
+}

@@ -1,0 +1,20 @@
+import java.awt.Container;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class WindowExample1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame frame = new JFrame("Hello Java Program");
+		frame.setLocation(500, 400);
+		Container contentPane = frame.getContentPane();
+		JLabel label = new JLabel("Hello, Java");
+		contentPane.add(label);
+		frame.pack();
+		frame.setVisible(true);
+
+	}
+
+}

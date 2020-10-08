@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class SangpumInner {
+
+	public SangpumInner() {
+		// TODO Auto-generated constructor stub
+	}
+
+	private ArrayList<Sangpum> list = new ArrayList<Sangpum>();
+
+	class Sangpum {
+		String code, name;
+		int count, price;
+		int sum = count * price;
+		String estimate = "보통";
+
+		Sangpum() {
+
+		}
+
+		void input_Sangpum() {
+			Scanner scan = new Scanner(System.in);
+			System.out.println("코드를 입력=> ");
+			code = scan.next();
+			System.out.println("상품명을 입력=> ");
+			name = scan.next();
+			System.out.println("수량을 입력=> ");
+			count = scan.nextInt();
+			System.out.println("단가 입력=> ");
+			price = scan.nextInt();
+
+		}
+
+		void output_Sangpum() {
+			System.out.printf("%2s %5s %4d %4d %4d %5s\n", code, name, count, price, sum, estimate);
+		}
+
+	}
+}

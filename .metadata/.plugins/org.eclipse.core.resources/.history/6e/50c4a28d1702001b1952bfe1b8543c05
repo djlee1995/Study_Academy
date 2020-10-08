@@ -1,0 +1,17 @@
+
+public class SangpumInner {
+
+	
+	
+	
+	
+	
+	
+	
+	class Sangpum{
+	String code,name,estimate;
+	int count,price,sum;
+	
+	
+}
+}

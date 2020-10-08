@@ -1,0 +1,16 @@
+
+class TransferThread extends Thread {
+	SharedArea1 sharedArea1;
+	TransferThread(SharedArea1 area) {
+		// TODO Auto-generated constructor stub
+		sharedArea1=area;
+	}
+	public void run() {
+		for(int cnt =0; cnt<12; cnt++) {
+			sharedArea1.account1.withdraw(1000000);
+			System.out.println("ÀÌ¸ù·æ °èÁÂ: 100¸¸¿ø ÀÎÃâ,");
+			sharedArea1.account2.deposit(1000000);
+			System.out.println("¼ºÃáÇâ °èÁÂ: 100¸¸¿ø ÀÔ±Ý");
+		}
+	}
+}
