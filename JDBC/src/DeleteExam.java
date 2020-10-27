@@ -22,7 +22,7 @@ public class DeleteExam {
 			con = DriverManager.getConnection(url, "scott", "123456");
 			stmt = con.createStatement();
 			String sql = "Delete from member Where hakbun ='" + hakbun + "'";
-			stmt.executeQuery(sql);
+			stmt.executeUpdate(sql);
 
 			System.err.println("데이터베이스 내용 삭제 성공!");
 
